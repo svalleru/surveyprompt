@@ -1,0 +1,94 @@
+promd-1s-dhcp244:surveyprompt_cliapp svalleru$ python main.py sample_survey_nested_followups.json
+Please enter your full name (first and last):
+>>Shan Valleru
+What is your favorite food?:
+>>Pasta Pomodoro
+What is your favorite color?
+1)Red
+2)Orange
+3)Yellow
+4)Green
+5)Blue
+6)Purple
+>>4
+What kind of computer do you use?
+1)Mac
+2)Windows
+3)Other
+>>1
+What type of Mac do you own?
+1)Notebook
+2)Desktop
+>>1
+What model?:
+>>Macbook Pro
+How many years have you owned it?:
+>>5
+survey stored succesfully..
+promd-1s-dhcp244:surveyprompt_cliapp svalleru$ python main.py sample_survey_nested_followups.json
+Please enter your full name (first and last):
+>>Foo Bar
+What is your favorite food?:
+>>Ramen
+What is your favorite color?
+1)Red
+2)Orange
+3)Yellow
+4)Green
+5)Blue
+6)Purple
+>>1
+What kind of computer do you use?
+1)Mac
+2)Windows
+3)Other
+>>1
+What type of Mac do you own?
+1)Notebook
+2)Desktop
+>>1
+What model?:
+>>Macbook Air
+How many years have you owned it?:
+>>2
+survey stored succesfully..
+promd-1s-dhcp244:surveyprompt_cliapp svalleru$ python report.py
+############ SURVEY REPORT ############
+Total number of users who took the survey: 2
+Q: What model?
++-------------+-------------+
+| Macbook Pro | Macbook Air |
++-------------+-------------+
+|      1      |      1      |
++-------------+-------------+
+Q: What kind of computer do you use?
++-----+
+| Mac |
++-----+
+|  2  |
++-----+
+Q: What is your favorite color?
++-------+-----+
+| Green | Red |
++-------+-----+
+|   1   |  1  |
++-------+-----+
+Q: What type of Mac do you own?
++----------+
+| Notebook |
++----------+
+|    2     |
++----------+
+Q: What is your favorite food?
++----------------+-------+
+| Pasta Pomodoro | Ramen |
++----------------+-------+
+|       1        |   1   |
++----------------+-------+
+Q: How many years have you owned it?
++---+---+
+| 2 | 5 |
++---+---+
+| 1 | 1 |
++---+---+
+promd-1s-dhcp244:surveyprompt_cliapp svalleru$
